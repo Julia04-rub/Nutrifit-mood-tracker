@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  body {
+    background-color: yellow;
+  }
+</style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriFit Mood Tracker</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>NutriFit Mood Tracker</h1>
+
+    <section class="section" id="nutrition-section">
+      <h2>🍽️ Log a Meal</h2>
+      <input type="text" id="foodInput" placeholder="Enter food (e.g. banana, eggs)">
+      <button id="trackBtn">Track</button>
+      <div id="nutritionResult"></div>
+    </section>
+
+    <section class="section" id="mood-section">
+      <h2>😊 Track Mood & Energy</h2>
+      <label for="mood">Mood:</label>
+      <select id="mood">
+        <option value="happy">Happy</option>
+        <option value="tired">Tired</option>
+        <option value="stressed">Stressed</option>
+        <option value="neutral">Neutral</option>
+      </select>
+      <label for="energy">Energy Level:</label>
+      <select id="energy">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </section>
+
+    <section class="section" id="exercise-section">
+      <h2>🏃 Exercise Suggestion</h2>
+      <select id="exerciseType">
+        <option value="cardio">Cardio</option>
+        <option value="legs">Legs</option>
+        <option value="arms">Arms</option>
+        <option value="core">Core</option>
+      </select>
+      <button id="getExercise">Get Workout</button>
+      <div id="exerciseResult"></div>
+    </section>
+
+    <section class="section" id="quote-section">
+      <h2>💬 Motivation of the Day</h2>
+      <button id="getQuote">Inspire Me</button>
+      <div id="quote"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
