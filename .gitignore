@@ -1,0 +1,25 @@
+# Ignore environment files with API keys or secrets
+.env
+
+# Node modules (if you ever add Node.js)
+node_modules/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Backup and temp files
+*.bak
+*.tmp
+
+# OS generated files
+ehthumbs.db
+Icon?
+desktop.ini
+git 
