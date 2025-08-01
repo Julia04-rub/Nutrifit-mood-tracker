@@ -77,6 +77,7 @@ NutriMood_Tracker/
 ```
 https://www.youtube.com/watch?v=0t6eWNBR7Ig
 ```
-
+## screenshot 
+<img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/badf5393-61dd-4428-a9ab-46607d4816b7" />
 
 
