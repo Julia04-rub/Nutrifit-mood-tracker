@@ -10,8 +10,8 @@ This is a Dockerized web application that allows users to check on their health 
 ## Docker Image Info
 
 Docker Hub Repo: [Docker Hub](https://hub.docker.com/repository/docker/julia578/nutrimood_tracker)
-Image Name: `nutrimood_tracker`
-Tags: `latest`
+-Image Name: `nutrimood_tracker`
+-Tags: `latest`
 
 ## Build Instructions
 
@@ -55,7 +55,7 @@ sudo service restart haproxy
 Run this command repeatedly:
 
 ```bash
-curl http://localhost:80
+curl -I http://localhost:80
 ```
 
 ***You should see alternating content responses if Web01 and Web02 have minor HTML differences (e.g., unique headings).***
