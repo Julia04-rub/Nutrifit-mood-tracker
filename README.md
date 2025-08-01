@@ -2,21 +2,26 @@
 
 This is a Dockerized web application that allows users to check on their health conditions by logging meals and checking the amount of fats they contain, proteins, and calories, and also track moods, and get personalized workout recommendations based on their input. NutriMood Tracker uses an external Nutrition API and can be deployed on two web servers behind an HAProxy load balancer.
 
+# How to run it locally 
+1. save the index.html,style.css, and script.js files in the same folder on your local computer
+2. Open the index.html file in any web browser (Chrome, Firefox, Safari, Edge, etc.).
+
+
 # Docker Image Info
 
-Docker Hub Repo:** [https://hub.docker.com/r/juliarubibi/nutrimood](https://hub.docker.com/r/juliarubibi/nutrimood)
-Image Name:** juliarubibi/nutrimood
-Tags: v1
+Docker Hub Repo: https://hub.docker.com/repository/docker/julia578/nutrimood_tracker
+Image Name: nutrimood_tracker
+Tags: latest
 
 # Build Instructions
 
 Build and push the image locally:
 
   bash
-docker build -t nutrimood:v1 .
-docker tag nutrimood:v1 juliarubibi/nutrimood:v1
-docker push juliarubibi/nutrimood:v1
-
+docker build -t nutrimood:latest .
+docker tag nutrimood:latest juliarubibi/nutrimood:latest
+docker push juliarubibi/nutrimood:latest
+```
 # Run Instructions (Web01 / Web02)
 
 Run this on each web server:
@@ -25,22 +30,22 @@ bash
 docker run -d -p 8080:80 \
   --name nutrimood \
   -e NUTRI_API_KEY=your_actual_api_key \
-  juliarubibi/nutrimood:v1
-
+  juliarubibi/nutrimood:latest
+```
 
 # Load Balancer Configuration (HAProxy on lb-01)
 
 # haproxy.cfg:
 
- haproxy
-frontend http_front
+frontend http-in
     bind *:80
-    default_backend nutrimood_servers
+    default_backend servers
 
-backend nutrimood_servers
+backend servers
     balance roundrobin
-    server web01 192.168.10.11:8080 check
-    server web02 192.168.10.12:8080 check
+    server web01 172.20.0.11:80 check
+    server web02 172.20.0.12:80 check
+    http-response set-header X-Served-By %[srv_name]
 ```
 
 # Reload HAProxy:
@@ -85,24 +90,21 @@ Include `apikey.js` in your HTML before `script.js`.
 # Project Structure
 
 plaintext
+
 NutriMood_Tracker/
+
 ├── index.html       # Main UI
 ├── styles.css       # Styling
 ├── script.js        # API logic
 ├── Dockerfile       # Build config
-.gitignore       (optional)(it hides the files that you dont want to expose to github)
+.gitignore       (optional)(it hides the files that you don't want to expose to github)
+```
 
 
-# Screenshots
+# screenshots
+
+# Demo video 
 
 
-
----
-
-# live deployment 
-link: https://nutrimood-tracker-latest.onrender.com/
-
-
-# Final Checklist
 
 
