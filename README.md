@@ -9,9 +9,9 @@ This is a Dockerized web application that allows users to check on their health 
 
 ## Docker Image Info
 
-Docker Hub Repo: [Docker Hub](https://hub.docker.com/repository/docker/julia578/nutrimood_tracker)
--Image Name: `nutrimood_tracker`
--Tags: `latest`
+**Docker Hub Repo:** [Docker Hub](https://hub.docker.com/repository/docker/julia578/nutrimood_tracker)
+- **Image Name:** `nutrimood_tracker`
+- **Tags:** `latest`
 
 ## Build Instructions
 
