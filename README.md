@@ -73,11 +73,10 @@ NutriMood_Tracker/
 .gitignore       (optional)(it hides the files expose to github)
 ```
 
-
-# screenshots
-
-# Demo video 
-
+## YouTube Demo video 
+```
+https://www.youtube.com/watch?v=0t6eWNBR7Ig
+```
 
 
 
