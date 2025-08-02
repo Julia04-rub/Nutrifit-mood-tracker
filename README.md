@@ -75,7 +75,7 @@ NutriMood_Tracker/
 
 ## YouTube Demo video 
 ```
-https://www.youtube.com/watch?v=0t6eWNBR7Ig
+https://www.youtube.com/watch?v=TlpjgnUOAuo
 ```
 ## screenshot 
 <img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/badf5393-61dd-4428-a9ab-46607d4816b7" />
